@@ -1,6 +1,7 @@
 package src
 
 import (
+	"fmt"
 	"sync"
 )
 
@@ -25,6 +26,7 @@ func newTaskPool() *taskPool {
 }
 
 func (pool *taskPool) get() *Task {
+	fmt.Println(1)
 	return pool.bp.Get().(*Task)
 }
 
