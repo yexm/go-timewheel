@@ -1,4 +1,4 @@
-package src
+package go_timewheel
 
 import (
 	"context"

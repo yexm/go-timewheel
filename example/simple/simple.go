@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/yexm/go-timewheel/src"
 	"time"
+
+	go_timewheel "github.com/yexm/go-timewheel"
 )
 
 func main() {
-	tw, err := src.NewTimeWheel(200*time.Millisecond, 10)
+	tw, err := go_timewheel.NewTimeWheel(200*time.Millisecond, 10)
 	if err != nil {
 		panic(err)
 	}
