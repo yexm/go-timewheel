@@ -1,44 +1,46 @@
-package go_timewheel
+package example
 
 import (
 	"fmt"
 	"time"
+
+	"github.com/yexm/go-timewheel/src"
 )
 
 var (
-	DefaultTimeWheel, _ = NewTimeWheel(time.Second, 120)
+	DefaultTimeWheel, _ = src.NewTimeWheel(time.Second, 120)
 )
 
 func init() {
 	DefaultTimeWheel.Start()
 }
 
-func ResetDefaultTimeWheel(tw *TimeWheel) {
+func ResetDefaultTimeWheel(tw *src.TimeWheel) {
 	tw.Start()
 	DefaultTimeWheel = tw
 }
 
-func Add(delay time.Duration, callback func()) *Task {
+func Add(delay time.Duration, callback func()) *src.Task {
 	return DefaultTimeWheel.Add(delay, callback)
 }
 
-func AddCron(delay time.Duration, callback func()) *Task {
+func AddCron(delay time.Duration, callback func()) *src.Task {
 	return DefaultTimeWheel.AddCron(delay, callback)
 }
 
-func Remove(task *Task) error {
+func Remove(task *src.Task) error {
 	return DefaultTimeWheel.Remove(task)
 }
 
-func NewTimer(delay time.Duration) *Timer {
+func NewTimer(delay time.Duration) *src.Timer {
 	return DefaultTimeWheel.NewTimer(delay)
 }
 
-func NewTicker(delay time.Duration) *Ticker {
+func NewTicker(delay time.Duration) *src.Ticker {
 	return DefaultTimeWheel.NewTicker(delay)
 }
 
-func AfterFunc(delay time.Duration, callback func()) *Timer {
+func AfterFunc(delay time.Duration, callback func()) *src.Timer {
 	return DefaultTimeWheel.AfterFunc(delay, callback)
 }
 

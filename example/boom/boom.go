@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	go_timewheel "github.com/yexm/go-timewheel"
+	"github.com/yexm/go-timewheel/src"
 )
 
 var (
@@ -158,8 +158,8 @@ func batchRun360s() {
 	go processCallbackLoop(loop, taskNum, delay, beforeDiff, afterDiff)
 }
 
-func newTimeWheel() *go_timewheel.TimeWheel {
-	tw, err := go_timewheel.NewTimeWheel(1*time.Second, 120)
+func newTimeWheel() *src.TimeWheel {
+	tw, err := src.NewTimeWheel(1*time.Second, 120)
 	if err != nil {
 		panic(err)
 	}

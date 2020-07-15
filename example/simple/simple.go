@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	go_timewheel "github.com/yexm/go-timewheel"
+	"github.com/yexm/go-timewheel/src"
 )
 
 func main() {
-	tw, err := go_timewheel.NewTimeWheel(200*time.Millisecond, 10)
+	tw, err := src.NewTimeWheel(200*time.Millisecond, 10)
 	if err != nil {
 		panic(err)
 	}

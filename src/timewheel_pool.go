@@ -1,4 +1,4 @@
-package go_timewheel
+package src
 
 import (
 	"math/rand"
@@ -12,7 +12,7 @@ type TimeWheelPool struct {
 	incr int64 // not need for high accuracy
 }
 
-func NewTimeWheelPool(size int, tick time.Duration, bucketsNum int, options ...optionCall) (*TimeWheelPool, error) {
+func NewTimeWheelPool(size int, tick time.Duration, bucketsNum int, options ...example.optionCall) (*TimeWheelPool, error) {
 	twp := &TimeWheelPool{
 		pool: make([]*TimeWheel, size),
 		size: int64(size),
