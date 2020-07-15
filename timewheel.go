@@ -47,6 +47,6 @@ func After(delay time.Duration) <-chan time.Time {
 }
 
 func Sleep(delay time.Duration) {
-	fmt.Println(1)
+	fmt.Println(2)
 	DefaultTimeWheel.Sleep(delay)
 }
