@@ -1,6 +1,7 @@
 package go_timewheel
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -46,5 +47,6 @@ func After(delay time.Duration) <-chan time.Time {
 }
 
 func Sleep(delay time.Duration) {
+	fmt.Println(1)
 	DefaultTimeWheel.Sleep(delay)
 }
