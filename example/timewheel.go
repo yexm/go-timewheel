@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/yexm/go-timewheel/src"
+	"go-timewheel/src"
 )
 
 var (

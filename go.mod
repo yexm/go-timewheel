@@ -1,3 +1,3 @@
-module github.com/yexm/go-timewheel
+module go-timewheel
 
 go 1.14
