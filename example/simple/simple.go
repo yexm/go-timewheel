@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"go-timewheel/src"
+	"github.com/yexm/go-timewheel/src"
 )
 
 func main() {

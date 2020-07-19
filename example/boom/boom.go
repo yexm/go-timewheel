@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"go-timewheel/src"
+	"github.com/yexm/go-timewheel/src"
 )
 
 var (
